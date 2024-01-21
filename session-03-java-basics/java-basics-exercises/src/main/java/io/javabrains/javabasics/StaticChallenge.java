@@ -1,4 +1,4 @@
-package io.javabrains.javabasics;
+package main.java.io.javabrains.javabasics;
 
 /*
 Create a class `Rectangle` with the following attributes: `width`, `height`, and a static variable `numOfRectangles` which will keep track of the number of rectangles created.
@@ -11,8 +11,33 @@ Create a class `Rectangle` with the following attributes: `width`, `height`, and
  */
 
 public class StaticChallenge {
+    public static class Rectangle{
+        private double width,height;
+        private static int numOfRectangles = 0;
+        public Rectangle(double width, double height){
+            this.width = width;
+            this.height = height;
+            numOfRectangles++;
+        }
+        public double getArea(){
+            return width*height;
+        }
+        public double getPerimeter(){
+            return  2*(width+height);
+        }
+        public static int getNumOfRectangles(){
+            return numOfRectangles;
+        }
 
+    }
     public static void main(String[] args) {
+        Rectangle rectangle1 = new Rectangle(12,5);
+        Rectangle rectangle2 = new Rectangle(65,100);
+        Rectangle rectangle3 = new Rectangle(23,20);
+        System.out.println("Rectangle 1 area is "+rectangle1.getArea()+"perimeter is "+rectangle1.getPerimeter());
+        System.out.println("Rectangle 2 area is "+rectangle2.getArea()+"perimeter is "+rectangle2.getPerimeter());
+        System.out.println("Rectangle 3 area is "+rectangle3.getArea()+"perimeter is "+rectangle3.getPerimeter());
 
+        System.out.println("Number of Rectangles created are "+Rectangle.getNumOfRectangles());
     }
 }
