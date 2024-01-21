@@ -1,4 +1,4 @@
-package io.javabrains.javabasics;
+package main.java.io.javabrains.javabasics;
 
 public class InstanceOf {
 
@@ -12,6 +12,24 @@ public class InstanceOf {
         };
 
         // Challenge: Use instanceof to determine the type of each object in the array
-
+    for(Object obj : objects){
+        if(obj instanceof Integer){
+            System.out.println(obj+ " is an Integer");
+        } else if (obj instanceof String) {
+            System.out.println(obj+" is a String");
+        }
+        else if (obj instanceof Boolean) {
+            System.out.println(obj+" is a Boolean");
+        }
+        else if (obj instanceof Float) {
+            System.out.println(obj+" is a Float");
+        }
+        else if (obj instanceof Double) {
+            System.out.println(obj+" is a Double");
+        }
+        else{
+            System.out.println(obj+" is unknown");
+        }
+    }
     }
 }

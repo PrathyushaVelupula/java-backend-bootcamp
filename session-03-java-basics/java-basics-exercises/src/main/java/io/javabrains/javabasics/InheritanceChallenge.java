@@ -1,4 +1,4 @@
-package io.javabrains.javabasics;
+package main.java.io.javabrains.javabasics;
 
 /*
 
@@ -13,8 +13,68 @@ package io.javabrains.javabasics;
 
 
 public class InheritanceChallenge {
+    abstract static class Animal {
+        String name;
+        int age;
+
+        public Animal(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        abstract void makeSound();
+    }
+
+    public static class Dog extends Animal {
+        String breedName;
+
+        public Dog(String name, int age, String breedName) {
+            super(name, age);
+            this.breedName = breedName;
+        }
+
+        @Override
+        public void makeSound() {
+            System.out.println("The Dog Barks");
+        }
+    }
+
+    public static class Cat extends Animal {
+        int noOfLives;
+
+        public Cat(String name, int age, int noOfLives) {
+            super(name, age);
+            this.noOfLives = noOfLives;
+        }
+
+        @Override
+        public void makeSound() {
+            System.out.println("The cat meows");
+        }
+    }
+
 
     public static void main(String[] args) {
+        Animal[] animals = {
+                new Dog("buddy", 7, "Pomeranian"),
+                new Cat("Ginger", 4, 9),
+                new Animal("Lion", 3) {
+                    public void makeSound() {
+                        System.out.println("The Lion roars");
+                    }
+                },
+                new Animal("Tiger", 9) {
+                    public void makeSound() {
+                        System.out.println("The Tiger roars");
+                    }
+                }
+        };
 
+        for (Animal animal : animals) {
+            System.out.println("Name: " + animal.name);
+            System.out.println("Age: " + animal.age);
+            animal.makeSound();
+        }
     }
 }
+
