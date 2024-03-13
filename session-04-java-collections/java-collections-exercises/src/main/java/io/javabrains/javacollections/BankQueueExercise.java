@@ -1,4 +1,4 @@
-package io.javabrains.javacollections;
+package javabrains.javacollections;
 
 // Implement the BankQueue class and methods. Look at the main method
 // for clues on what the methods need to do

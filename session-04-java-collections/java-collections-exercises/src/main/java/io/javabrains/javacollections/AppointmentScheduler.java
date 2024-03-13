@@ -1,4 +1,4 @@
-package io.javabrains.javacollections;
+package javabrains.javacollections;
 
 import java.time.LocalDateTime;
 import java.util.NavigableSet;

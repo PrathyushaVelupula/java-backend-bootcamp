@@ -1,4 +1,4 @@
-package main.java.io.javabrains.javabasics;
+package javabrains.javabasics;
 
  abstract class Animal2{
     abstract void makeSound();

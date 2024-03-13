@@ -1,4 +1,4 @@
-package io.javabrains.javacollections;
+package javabrains.javacollections;
 
 import java.util.Collection;
 import java.util.Set;
